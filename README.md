@@ -20,3 +20,11 @@ Send us a link to your repo. We must be able to view your source code and be abl
 
 ### Questions?
 If there's anything that's unclear or if you just have a general question, we're just an email away! :)
+
+### Usage
+Use node 0.12
+ - `$ npm install`
+ - `$ cd public`
+ - `$ bower install`
+ - `$ gulp`
+ - Go to `localhost:8000`
