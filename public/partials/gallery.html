@@ -11,12 +11,23 @@
             <label class="checkbox-inline" ng-repeat="farm in (farms | unique)">
                 <input type="checkbox" id="inlineCheckbox1" ng-value="farm" ng-checked="display.farms.indexOf(farm)>=0" ng-click="toggleFarm(farm)"> Farm {{farm}}
             </label>
+            <h6>Sort By</h6>
+            <div class="btn-group" id="sortSelector">
+                <button type="button" ng-class="(display.sorting==='title')?'btn-primary' : 'btn-default'" class="btn" ng-click="display.sorting='title'">Title</button>
+                <button type="button" ng-class="(display.sorting==='meta.id')?'btn-primary' : 'btn-default'" class="btn" ng-click="display.sorting='meta.id'">ID</button>
+                <button type="button" ng-class="(display.sorting==='meta.server')?'btn-primary' : 'btn-default'" class="btn" ng-click="display.sorting='meta.server'">Server</button>
+            </div>
+            <h6>Sort Type</h6>
+            <div class="btn-group" id="sortOrderSelector">
+                <button type="button" ng-class="(display.sortType===false)?'btn-primary' : 'btn-default'" class="btn" ng-click="display.sortType=false">Asc</button>
+                <button type="button" ng-class="(display.sortType===true)?'btn-primary' : 'btn-default'" class="btn" ng-click="display.sortType=true">Des</button>
+            </div>
         </div>
 
     </div>
     <div class="col-md-9" id="fk-display">
         <div class="galleryContainer">
-            <image-container class="image-container" display="display" img-data="img" ng-repeat="img in images | filter:search"></image-container>
+            <image-container class="image-container" display="display" img-data="img" ng-repeat="img in images | filter:search | orderBy:display.sorting:display.sortType"></image-container>
         </div>
     </div>
 </div>

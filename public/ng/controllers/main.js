@@ -1,9 +1,13 @@
 app.controller('mainCtrl', ['$scope', '$rootScope', 'initFactory', '$location', function($scope, $rootScope, initFactory, $location){
     $rootScope.displayMode = 'gallery';
-    $scope.display = {
-        "mode": 'compact',
-        "farms": []
-    };
+    if(!$rootScope.display){
+        $rootScope.display = {
+            "mode": 'compact',
+            "farms": [],
+            "sorting": 'title',
+            "sortType": false
+        };
+    }
 
     if(!$rootScope.images){
         initFactory.init(function(data){
