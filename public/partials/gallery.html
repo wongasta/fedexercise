@@ -1,0 +1,22 @@
+<div class="main-content">
+    <div class="col-md-3" id="fk-control">
+        <h4>Control Panel</h4>
+        <div class="controls">
+            <h6>Display Mode</h6>
+            <div class="btn-group" id="displaySelector" role="group">
+                <button type="button" ng-class="(display.mode==='compact')?'btn-primary' : 'btn-default'" class="btn" ng-click="display.mode='compact'">Compact</button>
+                <button type="button" ng-class="(display.mode==='expanded')?'btn-primary' : 'btn-default'" class="btn" ng-click="display.mode='expanded'">Expanded</button>
+            </div>
+            <h6>Farm</h6>
+            <label class="checkbox-inline" ng-repeat="farm in (farms | unique)">
+                <input type="checkbox" id="inlineCheckbox1" ng-value="farm" ng-checked="display.farms.indexOf(farm)>=0" ng-click="toggleFarm(farm)"> Farm {{farm}}
+            </label>
+        </div>
+
+    </div>
+    <div class="col-md-9" id="fk-display">
+        <div class="galleryContainer">
+            <image-container class="image-container" display="display" img-data="img" ng-repeat="img in images | filter:search"></image-container>
+        </div>
+    </div>
+</div>

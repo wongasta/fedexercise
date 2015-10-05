@@ -1,0 +1,9 @@
+<div class="imgWrapper" ng-class="display.mode" ng-show="display.farms.indexOf(imgData.meta.farm)>=0">
+    <a ng-href="#/img/{{imgData.meta.id}}"><img ng-src="{{imgData.url.linkSm}}" alt="{{imgData.title}}" /></a>
+    <div class="description" ng-show="display.mode==='expanded'">
+        <h3>{{imgData.title}}</h3>
+        <p>ID: {{imgData.meta.id}} <br />
+            Farm: {{imgData.meta.farm}} <br />
+            Server: {{imgData.meta.server}}</p>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+@media screen and (max-width: 800px) {
+  #fk-control{
+    height: 250px !important;
+    min-height: 250px;
+  }
+
+  #fk-display{
+    height: auto !important;
+    text-align: center;
+  }
+}

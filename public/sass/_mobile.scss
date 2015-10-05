@@ -1,0 +1,22 @@
+@media screen and (max-width: 400px) {
+  #fk-control{
+    height: 200px !important;
+    min-height: 200px;
+  }
+
+  #fk-display{
+    height: auto !important;
+    text-align: center;
+  }
+
+  nav{
+    height: 50px;
+    overflow: hidden;
+
+    .close-img{
+      position: relative;
+      top: -40px;
+      width: 50px;
+    }
+  }
+}

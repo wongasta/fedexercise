@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flicker API Display Console</title>
+  <link rel="stylesheet" type="text/css" href="dist/min/csslib.css" />
+  <link rel="stylesheet" type="text/css" href="dist/min/style.css" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body ng-app="appMod">
+
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <h1>Flicker Wrapper</h1>
+    </div>
+    <div class="collapse navbar-collapse searchbar rightTab">
+      <div class="input-group searchbar" ng-show="displayMode==='gallery'">
+        <input type="text" class="form-control" placeholder="Search Title" id="search" ng-model="search.title" />
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="close-img rightTab" ng-if="displayMode==='img'">
+      <a href="#/gallery"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+</nav>
+
+<div ng-view></div>
+
+<!--<script type="text/javascript" src="dist/con/all.js"></script>-->
+<!--<script type="text/javascript" src="dist/con/ngall.js"></script>-->
+<script type="text/javascript" src="dist/min/all.min.js"></script>
+<script type="text/javascript" src="dist/min/ng.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "fedexercise",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wongasta/fedexercise",
+  "description": "IBM Front End Assignment",
+  "main": "app.js",
+  "authors": [
+    "Yixin Xia"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "angular-route": "~1.4.7",
+    "angular-bootstrap": "~0.13.4",
+    "underscore": "~1.8.3"
+  }
+}
